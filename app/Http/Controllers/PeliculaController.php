@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Pelicula;
+
 
 class PeliculaController extends Controller
 {
@@ -13,7 +15,7 @@ class PeliculaController extends Controller
         return response()->json($peliculas);
     }
 
-    public function getById(){
+    public function getById($id){
 
         $pelicula = Pelicula::find($id);
 
